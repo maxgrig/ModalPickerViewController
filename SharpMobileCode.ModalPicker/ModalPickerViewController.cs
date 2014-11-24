@@ -133,22 +133,22 @@ namespace SharpMobileCode.ModalPicker
             var width = UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.Portrait ? 
                 _parent.View.Frame.Width : _parent.View.Frame.Height;
 
-            var internalViewSize = SizeF.Empty;
+            var internalViewSize = CGSize.Empty;
             switch(_pickerType)
             {
                 case ModalPickerType.Date:
-                    DatePicker.Frame = RectangleF.Empty;
+					DatePicker.Frame = CGRect.Empty;
                     internalViewSize = new CGSize(width, DatePicker.Frame.Height + _headerBarHeight);
                     break;
                 case ModalPickerType.Custom:
-                    PickerView.Frame = RectangleF.Empty;
+					PickerView.Frame = CGRect.Empty;
                     internalViewSize = new CGSize(width, PickerView.Frame.Height + _headerBarHeight);
                     break;
                 default:
                     break;
             }
 
-            var internalViewFrame = RectangleF.Empty;
+			var internalViewFrame = CGRect.Empty;
             if (InterfaceOrientation == UIInterfaceOrientation.Portrait)
             {
                 if (onRotate)

@@ -48,7 +48,7 @@ namespace SharpMobileCode.ModalPicker
 
             inView.AddSubview(toViewController.View);
 
-            toViewController.View.Frame = RectangleF.Empty;
+			toViewController.View.Frame = CGRect.Empty;
 
             var startingPoint = GetStartingPoint(fromViewController.InterfaceOrientation);
             if (fromViewController.InterfaceOrientation == UIInterfaceOrientation.Portrait)
@@ -76,10 +76,10 @@ namespace SharpMobileCode.ModalPicker
                                 );
         }
 
-        PointF GetStartingPoint(UIInterfaceOrientation orientation)
+        CGPoint GetStartingPoint(UIInterfaceOrientation orientation)
         {
             var screenBounds = UIScreen.MainScreen.Bounds;
-            var coordinate = PointF.Empty;
+			var coordinate = CGPoint.Empty;
             switch(orientation)
             {
                 case UIInterfaceOrientation.Portrait:
@@ -99,10 +99,10 @@ namespace SharpMobileCode.ModalPicker
             return coordinate;
         }
 
-        PointF GetEndingPoint(UIInterfaceOrientation orientation)
+		CGPoint GetEndingPoint(UIInterfaceOrientation orientation)
         {
             var screenBounds = UIScreen.MainScreen.Bounds;
-            var coordinate = PointF.Empty;
+			var coordinate = CGPoint.Empty;
             switch(orientation)
             {
                 case UIInterfaceOrientation.Portrait:
