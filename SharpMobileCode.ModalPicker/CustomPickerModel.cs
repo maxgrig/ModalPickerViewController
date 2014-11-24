@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (C) 2014 
  * Author: Ruben Macias
  * http://sharpmobilecode.com @SharpMobileCode
@@ -18,8 +18,8 @@
  */
 
 using System;
-using MonoTouch.UIKit;
-using System.Drawing;
+using UIKit;
+using CoreGraphics;
 using System.Collections.Generic;
 
 namespace SharpMobileCode.ModalPicker
@@ -45,7 +45,7 @@ namespace SharpMobileCode.ModalPicker
 
         public override UIView GetView(UIPickerView picker, int row, int component, UIView view)
         {
-            var label = new UILabel(new RectangleF(0, 0, 300, 37))
+            var label = new UILabel(new CGRect(0, 0, 300, 37))
             {
                 BackgroundColor = UIColor.Clear,
                 Text = _itemsList[row],

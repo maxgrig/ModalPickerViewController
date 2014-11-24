@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (C) 2014 
  * Author: Ruben Macias
  * http://sharpmobilecode.com @SharpMobileCode
@@ -18,7 +18,7 @@
  */
 
 using System;
-using MonoTouch.UIKit;
+using UIKit;
 
 namespace SharpMobileCode.ModalPicker
 {
