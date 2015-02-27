@@ -28,14 +28,14 @@ namespace SharpMobileCode.ModalPicker
         {
         }
 
-		public /*override*/ IUIViewControllerAnimatedTransitioning PresentingController (UIViewController presented, UIViewController presenting, UIViewController source)
+		public override IUIViewControllerAnimatedTransitioning GetAnimationControllerForPresentedController (UIViewController presented, UIViewController presenting, UIViewController source)
 		{
-            var controller = new ModalPickerAnimatedTransitioning();
-            controller.IsPresenting = true;
+			var controller = new ModalPickerAnimatedTransitioning();
+			controller.IsPresenting = true;
 
-            return controller;
-        }
-
+			return controller;
+		}
+		 
         public override IUIViewControllerAnimatedTransitioning GetAnimationControllerForDismissedController(UIViewController dismissed)
         {
             var controller = new ModalPickerAnimatedDismissed();
